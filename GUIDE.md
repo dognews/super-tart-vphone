@@ -30,12 +30,14 @@ csrutil allow-reserach-guests enable
 sudo nvram boot-args="amfi_get_out_of_my_way=1"
 ```
 
-- Reboot into main operating system and verify
+- Reboot into main operating system and verify successfull
 ```bash
 sudo nvram boot-args
 ```
-Result (there should be no error):
+- There should be no error, output should look like this
 ```bash
+alex@testesttest % sudo nvram boot-args
+Password:
 boot-args	amfi_get_out_of_my_way=1
 ```
 
