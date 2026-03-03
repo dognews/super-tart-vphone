@@ -40,6 +40,8 @@ alex@testesttest % sudo nvram boot-args
 Password:
 boot-args	amfi_get_out_of_my_way=1
 ```
+- Download IPSW image for VM
+- https://ipsw.me/download/MacBookPro18,2/21A559
 
 # 2. Create pcc-research vm
 
@@ -67,7 +69,7 @@ cd super-tart
 
 ./scripts/run-signed.sh
 
-./.build/debug/tart create vphone --disk-size 32 --from-ipsw /Volumes/sn850x/Firmwares/UniversalMac_12.0.1_21A559_Restore.ipsw
+./.build/debug/tart create vphone --disk-size 32 --from-ipsw ~/Path/To/The.ipsw
 ```
 
 - Remove unnecessary files (except config.json)
