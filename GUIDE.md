@@ -9,7 +9,7 @@
 - other things (for compiling libirecovery)
 
 ```jsx
-brew install pkg-config autoconf automake libtool
+brew install pkg-config autoconf automake libtool libplist
 ```
 
 # Small tips?
@@ -109,6 +109,18 @@ git clone --recursive https://github.com/wh1te4ever/super-tart-vphone
 cd super-tart-vphone
 
 ./scripts/run-signed.sh
+```
+- Rebuild libimobiledevice-glue (irecovery dependency)
+```bash
+git clone --recursive https://github.com/libimobiledevice/libimobiledevice-glue
+
+cd libimobiledevice-glue
+
+./autogen.sh
+
+make -j8
+
+sudo make install
 ```
 
 - Rebuild irecovery; because vphone doesn’t support restore officially
