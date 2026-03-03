@@ -36,7 +36,7 @@ sudo nvram boot-args
 ```
 Result (there should be no error):
 ```bash
-boot-args	-v amfi_get_out_of_my_way=1
+boot-args	amfi_get_out_of_my_way=1
 ```
 
 # 2. Create pcc-research vm
