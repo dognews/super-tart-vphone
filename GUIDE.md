@@ -22,10 +22,21 @@ CMD + H shortcuts will functions as home button on iPhone VM.
 
 ```bash
 csrutil disable
-
-nvram amfi_get_out_of_my_way=1
-
 csrutil allow-reserach-guests enable
+```
+
+- Boot into main operating system
+```bash
+sudo nvram boot-args="amfi_get_out_of_my_way=1"
+```
+
+- Reboot into main operating system and verify
+```bash
+sudo nvram boot-args
+```
+Result (there should be no error):
+```bash
+boot-args	-v amfi_get_out_of_my_way=1
 ```
 
 # 2. Create pcc-research vm
